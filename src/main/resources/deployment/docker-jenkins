@@ -2,6 +2,9 @@
 
 docker run -d -p 6069:8080 --name cloud.config.server -v /AppConfig/dev:/AppConfig/dev -v /AppConfig/dev/tomcat.conf:/usr/local/tomcat/conf 10.39.101.226:5000/tomcat
 
+# JVM Variable
+CONFIG.SERVER.AUTH.CODE=
+
 #Jenkins 
 
 1. define Propagate environment variables:
