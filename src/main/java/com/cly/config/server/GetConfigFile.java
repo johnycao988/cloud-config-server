@@ -58,6 +58,8 @@ public class GetConfigFile extends HttpServlet {
 			reqAuthCode = reqAuthCode.trim();
 
 		String configFile = request.getParameter("CONFIG_FILE_NAME");
+
+		logger.info("A request from:"+request.getRemoteAddr()+" to get file:"+configFile);
 		
 		if (authCode != null && !authCode.equals(reqAuthCode)) {
 			throw new IOException("Invalide Auth code:" + reqAuthCode);
@@ -66,6 +68,8 @@ public class GetConfigFile extends HttpServlet {
 		readConfigFile(configFile, response);
 
 	}
+	
+	 
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
