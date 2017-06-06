@@ -1,6 +1,6 @@
 # create Tomcat docker container
 
-docker run -d -p 6069:8080 -e SERVICE_NAME=cloud.config.server --name cloud.config.server -v /AppConfig:/AppConfig -v /AppConfig/test/tomcat.conf:/usr/local/tomcat/conf 10.39.101.226:5000/tomcat
+docker run -d -h 10.39.101.226 -p 6069:8080 -e SERVICE_NAME=cloud.config.server --name cloud.config.server -v /AppConfig:/AppConfig -v /AppConfig/test/tomcat.conf:/usr/local/tomcat/conf 10.39.101.226:5000/tomcat
 
 # JVM Variable
 CONFIG.SERVER.AUTH.CODE==AUTHCODE-0001
